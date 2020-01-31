@@ -4,6 +4,7 @@
   become_method: sudo
   become_user: root
   vars:
+    pip_mirrors: https://pypi.tuna.tsinghua.edu.cn
     docker__registry_mirrors_json: |
       "registry-mirrors":["https://xxx.mirror.aliyuncs.com"]
     minikube_version: v1.4.0

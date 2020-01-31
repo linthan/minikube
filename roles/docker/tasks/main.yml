@@ -1,4 +1,9 @@
 ---
+- name: copy pip.conf file
+  template:
+    src: "pip.conf.j2"
+    dest: "{{home}}/.pip/pip.conf"
+  when: pip_mirrors | d()
 - name: Disable pinned Docker version
   file:
     dest: "/etc/apt/preferences.d/docker.pref"
