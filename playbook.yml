@@ -1,0 +1,15 @@
+- hosts: main
+  remote_user: ubuntu
+  become: yes
+  become_method: sudo
+  become_user: root
+  vars:
+    docker__registry_mirrors_json: |
+      "registry-mirrors":["https://xxx.mirror.aliyuncs.com"]
+    minikube_version: v1.4.0
+    minikube_mirror: http://kubernetes.oss-cn-hangzhou.aliyuncs.com/minikube/releases
+    kubectl_mirror: http://kubernetes.oss-cn-hangzhou.aliyuncs.com/kubernetes-release/release
+  roles:
+    - role: setapt
+    - role: docker
+    - role: minikube

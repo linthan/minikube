@@ -1,0 +1,17 @@
+---
+- become: yes
+  block:
+    - name: copy sources files
+      copy:
+        src: "sources.list"
+        dest: "/etc/apt/sources.list"
+    - name: Run the equivalent of "apt-get update" as a separate step
+      apt:
+        update_cache: yes
+    - name: Install a list of packages
+      apt:
+        pkg:
+          - build-essential
+          - git
+          - wget
+          - curl
