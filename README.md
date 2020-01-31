@@ -53,5 +53,5 @@ minikube start --image-mirror-country cn \
 
 ### 可以参考下面一个博客
 
-- 个人博客 https://www.inlighting.org/2020/install-minikube-in-china.html
+- 参考博客 https://www.inlighting.org/2020/install-minikube-in-china.html
 - 官方安装方法 https://yq.aliyun.com/articles/221687
